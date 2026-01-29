@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>E-Store Kita | Katalog Produk</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">E-Store Kita</a>
+  <a href="produk.html">Katalog</a>
+  <a href="keranjang.html">Keranjang</a>
+  <a href="register.html">Daftar</a>
+  <a href="kontak.html">Kontak</a>
+</nav>
+
+<main>
+<h1>Katalog Produk Elektronik</h1>
+
+<div class="product-grid">
+
+<!-- PRODUK 1 -->
+<div class="product-card">
+  <img src="images/x10.jpg">
+  <h3>Laptop Ultrabook X10</h3>
+  <p>Rp 15.000.000</p>
+  <button onclick="addCart('Laptop Ultrabook X10',15000000)">Tambah Keranjang</button>
+</div>
+
+<!-- PRODUK 2 -->
+<div class="product-card">
+  <img src="images/zen pro.png">
+  <h3>Smartphone Galaxy Z Pro</h3>
+  <p>Rp 8.500.000</p>
+  <button onclick="addCart('Galaxy Z Pro',8500000)">Tambah Keranjang</button>
+</div>
+
+<!-- PRODUK 3 -->
+<div class="product-card">
+  <img src="images/headphone.jpg">
+  <h3>Headphone SonicBass V2</h3>
+  <p>Rp 1.200.000</p>
+  <button onclick="addCart('SonicBass V2',1200000)">Tambah Keranjang</button>
+</div>
+
+<!-- PRODUK 4 -->
+<div class="product-card">
+  <img src="images/mouse.jpg">
+  <h3>Mouse Gaming RGB</h3>
+  <p>Rp 350.000</p>
+  <button onclick="addCart('Mouse Gaming RGB',350000)">Tambah Keranjang</button>
+</div>
+
+<!-- PRODUK 5 -->
+<div class="product-card">
+  <img src="images/keyboard.jpg">
+  <h3>Keyboard Mechanical</h3>
+  <p>Rp 750.000</p>
+  <button onclick="addCart('Keyboard Mechanical',750000)">Tambah Keranjang</button>
+</div>
+
+<!-- PRODUK 6 -->
+<div class="product-card">
+  <img src="images/smartwatch.jpg">
+  <h3>Smartwatch Active</h3>
+  <p>Rp 2.000.000</p>
+  <button onclick="addCart('Smartwatch Active',2000000)">Tambah Keranjang</button>
+</div>
+
+</div>
+</main>
+
+<script>
+function addCart(nama, harga){
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push({nama, harga});
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert("Produk ditambahkan ke keranjang");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Daftar Member</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="index.html">E-Store Kita</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Form Pendaftaran Member</h1>
+
+  <form id="registerForm">
+    <label>Nama Lengkap</label>
+    <input type="text" required>
+
+    <label>Email</label>
+    <input type="email" required>
+
+    <label>Password</label>
+    <input type="password" required>
+
+    <label>Alamat</label>
+    <textarea required></textarea>
+
+    <button type="submit">Daftar</button>
+  </form>
+
+  <p id="hasil"></p>
+</main>
+
+<script>
+document.getElementById("registerForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  document.getElementById("hasil").innerHTML =
+    "Pendaftaran berhasil. Terima kasih telah bergabung!";
+});
+</script>
+
+</body>
+</html>

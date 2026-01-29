@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Hubungi Kami</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="index.html">E-Store Kita</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Hubungi Kami</h1>
+
+  <form id="kontakForm">
+    <label>Nama</label>
+    <input type="text" required>
+
+    <label>Email</label>
+    <input type="email" required>
+
+    <label>Pesan</label>
+    <textarea required></textarea>
+
+    <button type="submit">Kirim</button>
+  </form>
+
+  <p id="notif"></p>
+</main>
+
+<script>
+document.getElementById("kontakForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  document.getElementById("notif").innerHTML =
+    "Pesan berhasil dikirim. Terima kasih!";
+});
+</script>
+
+</body>
+</html>
